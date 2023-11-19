@@ -7,7 +7,7 @@ class Parent {
 
 class Sub extends Parent {
 	Sub() {
-		System.out.println("Sub");
+		System.out.println("derived");
 	}
 }
 
