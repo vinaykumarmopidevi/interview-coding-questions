@@ -13,4 +13,4 @@ target
 out/
 .idea_modules/
 *.iml
-
+.metadata/
