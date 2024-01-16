@@ -1,14 +1,14 @@
 package sample;
 
 class Parent {
-	 void show() {
+	void show() {
 		System.out.println("Parent's show()");
 	}
 }
 
 class Child extends Parent {
-	
-	 void show() {
+
+	void show() {
 		System.out.println("Child's show()");
 	}
 }

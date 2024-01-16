@@ -1,21 +1,26 @@
 package sample;
 
-abstract class A {
-	A() {
-		System.out.println("A Class");
+abstract class First {
+	First() {
+		System.out.println("First Constructor");
 	}
 }
 
-class B extends A {
-	 B() {
-		System.out.println("B Class");
+class Second extends First {
+	Second() {
+		System.out.println("Second Constructor");
 	}
 }
 
 public class AbstractClass {
 
 	public static void main(String[] args) {
-		B b = new B();
+		Second b = new Second();
 	}
 
 }
+/*
+ * Output
+ * First  Constructor 
+ * Second Constructor
+ */
