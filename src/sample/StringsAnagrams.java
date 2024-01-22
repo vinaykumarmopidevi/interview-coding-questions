@@ -16,16 +16,14 @@ public class StringsAnagrams {
 		String s1 = "vinay";
 		char[] charArr1 = s1.toCharArray();
 		Arrays.sort(charArr1);
-
+		System.out.println(String.valueOf(charArr1));
+		
 		String s2 = "ynvia";
 		char[] charArr2 = s2.toCharArray();
 		Arrays.sort(charArr2);
-
-		for (int i = 0; i < charArr1.length; i++) {
-			if (charArr1[i] != charArr2[i]) {
-				return false;
-			}
-		}
-		return true;
+		System.out.println(String.valueOf(charArr2));
+		
+		
+		return String.valueOf(charArr1).equals(String.valueOf(charArr2))? true: false;
 	}
 }
