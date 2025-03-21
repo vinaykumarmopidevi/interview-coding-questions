@@ -1,23 +1,20 @@
 package sample;
 
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
 
 public class CountCharacterOccurence {
 	public static void main(String[] args) {
 		String s = "Java is java again java again";
-		Set<String> set = new HashSet<String>();
-		for (int i = 0; i < s.length(); i++) {
-			String str = String.valueOf(s.charAt(i));
-			int count = s.length() - s.replace(str, "").length();
-			set.add(str + " " + count);
-			
+		Map<Character,Integer> map=new HashMap<>();
+		char[] charArray=s.toCharArray();
+
+		for(int i=0;i<charArray.length;i++){
+			map.put(charArray[i], map.getOrDefault(charArray[i], 0)+1);
 		}
-		
-		Iterator<String> itr=set.iterator();
-		while(itr.hasNext() ) {
-			System.out.println(itr.next());
+
+		for (Map.Entry<Character,Integer> entry:map.entrySet()) {
+			System.out.println(entry.getKey()+" "+entry.getValue());
 		}
 
 	}
