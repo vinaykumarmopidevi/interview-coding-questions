@@ -2,16 +2,26 @@ package sample;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class DistinctCharsCount {
 
 	public static void main(String[] args) {
 
-		printDistinctCharsWithCount("Java program to count frequencies");
+		//printDistinctCharsWithCount("Java program to count frequencies");
+		Set<String> set=new HashSet<>();
+		for (String str : "Java program to count frequencies".split("")) {
+			set.add(str);
+		}
+		Iterator<String> itr=set.iterator();
+		while (itr.hasNext()) {
+			System.out.print(itr.next());
+		}
 	}
 
 	private static void printDistinctCharsWithCount(String input) {
